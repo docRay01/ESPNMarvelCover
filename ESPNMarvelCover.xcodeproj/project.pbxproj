@@ -14,6 +14,7 @@
 		54D11987281B475400A7528F /* ESPNMarvelCoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D11986281B475400A7528F /* ESPNMarvelCoverTests.swift */; };
 		54D11991281B475400A7528F /* ESPNMarvelCoverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D11990281B475400A7528F /* ESPNMarvelCoverUITests.swift */; };
 		54D11993281B475400A7528F /* ESPNMarvelCoverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D11992281B475400A7528F /* ESPNMarvelCoverUITestsLaunchTests.swift */; };
+		54D119A1281B6EFC00A7528F /* AppSecret.json in Resources */ = {isa = PBXBuildFile; fileRef = 54D119A0281B6EFC00A7528F /* AppSecret.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		54D1198C281B475400A7528F /* ESPNMarvelCoverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ESPNMarvelCoverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D11990281B475400A7528F /* ESPNMarvelCoverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESPNMarvelCoverUITests.swift; sourceTree = "<group>"; };
 		54D11992281B475400A7528F /* ESPNMarvelCoverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESPNMarvelCoverUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		54D119A0281B6EFC00A7528F /* AppSecret.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AppSecret.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		54D11974281B474F00A7528F /* ESPNMarvelCover */ = {
 			isa = PBXGroup;
 			children = (
+				54D1199F281B6EFC00A7528F /* Assets */,
 				54D11975281B474F00A7528F /* ESPNMarvelCoverApp.swift */,
 				54D11977281B474F00A7528F /* ContentView.swift */,
 				54D11979281B475300A7528F /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				54D11992281B475400A7528F /* ESPNMarvelCoverUITestsLaunchTests.swift */,
 			);
 			path = ESPNMarvelCoverUITests;
+			sourceTree = "<group>";
+		};
+		54D1199F281B6EFC00A7528F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				54D119A0281B6EFC00A7528F /* AppSecret.json */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +244,7 @@
 			files = (
 				54D1197D281B475300A7528F /* Preview Assets.xcassets in Resources */,
 				54D1197A281B475300A7528F /* Assets.xcassets in Resources */,
+				54D119A1281B6EFC00A7528F /* AppSecret.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
