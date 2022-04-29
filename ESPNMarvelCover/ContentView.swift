@@ -10,7 +10,15 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         Text("Hello, world!")
-            .padding()
+            .padding().onAppear(perform: testCode)
+    }
+    
+    func testCode() {
+        print("Running test")
+        let networkService = MarvelNetworkService()
+        networkService.requestIssue(comicId: "12386") { issueModel in
+            print("Ran the service")
+        }
     }
 }
 
