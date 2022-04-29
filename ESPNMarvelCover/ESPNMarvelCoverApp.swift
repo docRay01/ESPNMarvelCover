@@ -11,7 +11,7 @@ import SwiftUI
 struct ESPNMarvelCoverApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ESPNMarvelHomeView()
         }
     }
 }

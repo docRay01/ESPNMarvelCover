@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		54D11976281B474F00A7528F /* ESPNMarvelCoverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D11975281B474F00A7528F /* ESPNMarvelCoverApp.swift */; };
-		54D11978281B474F00A7528F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D11977281B474F00A7528F /* ContentView.swift */; };
 		54D1197A281B475300A7528F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54D11979281B475300A7528F /* Assets.xcassets */; };
 		54D1197D281B475300A7528F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54D1197C281B475300A7528F /* Preview Assets.xcassets */; };
 		54D11987281B475400A7528F /* ESPNMarvelCoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D11986281B475400A7528F /* ESPNMarvelCoverTests.swift */; };
@@ -17,6 +16,8 @@
 		54D119A1281B6EFC00A7528F /* AppSecret.json in Resources */ = {isa = PBXBuildFile; fileRef = 54D119A0281B6EFC00A7528F /* AppSecret.json */; };
 		54D119AA281B744D00A7528F /* IssueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D119A6281B744D00A7528F /* IssueModel.swift */; };
 		54D119AB281B744D00A7528F /* MarvelNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D119A7281B744D00A7528F /* MarvelNetworkService.swift */; };
+		54D119AE281C73B200A7528F /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D119AD281C73B200A7528F /* IssueView.swift */; };
+		54D119B0281C73D500A7528F /* ESPNMarvelHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D119AF281C73D500A7528F /* ESPNMarvelHomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,6 @@
 /* Begin PBXFileReference section */
 		54D11972281B474F00A7528F /* ESPNMarvelCover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ESPNMarvelCover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D11975281B474F00A7528F /* ESPNMarvelCoverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESPNMarvelCoverApp.swift; sourceTree = "<group>"; };
-		54D11977281B474F00A7528F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		54D11979281B475300A7528F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54D1197C281B475300A7528F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		54D11982281B475400A7528F /* ESPNMarvelCoverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ESPNMarvelCoverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +50,8 @@
 		54D119A0281B6EFC00A7528F /* AppSecret.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AppSecret.json; sourceTree = "<group>"; };
 		54D119A6281B744D00A7528F /* IssueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueModel.swift; sourceTree = "<group>"; };
 		54D119A7281B744D00A7528F /* MarvelNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelNetworkService.swift; sourceTree = "<group>"; };
+		54D119AD281C73B200A7528F /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IssueView.swift; path = ../../../IssueView.swift; sourceTree = "<group>"; };
+		54D119AF281C73D500A7528F /* ESPNMarvelHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ESPNMarvelHomeView.swift; path = ../../../ESPNMarvelHomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +104,8 @@
 			children = (
 				54D1199F281B6EFC00A7528F /* Assets */,
 				54D119A2281B744D00A7528F /* Data */,
+				54D119AC281C6E1E00A7528F /* Views */,
 				54D11975281B474F00A7528F /* ESPNMarvelCoverApp.swift */,
-				54D11977281B474F00A7528F /* ContentView.swift */,
 				54D11979281B475300A7528F /* Assets.xcassets */,
 				54D1197B281B475300A7528F /* Preview Content */,
 			);
@@ -158,6 +160,15 @@
 				54D119A6281B744D00A7528F /* IssueModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		54D119AC281C6E1E00A7528F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				54D119AD281C73B200A7528F /* IssueView.swift */,
+				54D119AF281C73D500A7528F /* ESPNMarvelHomeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,8 +302,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54D11978281B474F00A7528F /* ContentView.swift in Sources */,
 				54D119AA281B744D00A7528F /* IssueModel.swift in Sources */,
+				54D119B0281C73D500A7528F /* ESPNMarvelHomeView.swift in Sources */,
+				54D119AE281C73B200A7528F /* IssueView.swift in Sources */,
 				54D11976281B474F00A7528F /* ESPNMarvelCoverApp.swift in Sources */,
 				54D119AB281B744D00A7528F /* MarvelNetworkService.swift in Sources */,
 			);
