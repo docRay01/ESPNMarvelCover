@@ -38,41 +38,49 @@ class MarvelNetworkService {
             return
         }
         
-        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-            guard let data = data,
-                  let topLevel: [String: Any] = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                  let dataDict = topLevel["data"] as? [String: Any],
-                  let issue: [String:Any] = (dataDict["results"] as? [[String: Any]])?.first else { return }
-            
-            let title: String? = issue["title"] as? String
-            var description: String? = issue["description"] as? String
-            if description?.isEmpty ?? false {
-                // look for the solicit text in the text blob and use that
-                // Test with comicId 356 (`4` Issue #1) to see this working
-                if let textBlob = issue["textObjects"] as? [[String: String]] {
-                    for textDict in textBlob {
-                        if textDict["type"] == "issue_solicit_text",
-                           let solicitText = textDict["text"] {
-                            description = solicitText
-                        }
-                    }
-                }
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let issueModel = self.parseIssue(comicId: comicId, data: data) else {
+                return
             }
             
-            let imagePath: [String: String]? = issue["thumbnail"] as? [String: String]
-            let imageUrl = self.imageURLFromImagePath(imagePath: imagePath, size: .large)
-
-            let issueModel: IssueModel = IssueModel(id: comicId,
-                                                    name: title,
-                                                    imageURLString: imageUrl,
-                                                    description: description)
-            //print(issueModel.name + " | " + (issueModel.imageURLString ?? "no image"))
             completionHandler(issueModel)
         }
 
         task.resume()
     }
+    
+    func parseIssue(comicId: String, data: Data?) -> IssueModel? {
+        guard let data = data,
+              let topLevel: [String: Any] = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+              let dataDict = topLevel["data"] as? [String: Any],
+              let issue: [String:Any] = (dataDict["results"] as? [[String: Any]])?.first else { return nil }
         
+        let title: String? = issue["title"] as? String
+        var description: String? = issue["description"] as? String
+        if description?.isEmpty ?? false {
+            // look for the solicit text in the text blob and use that
+            // Test with comicId 356 (`4` Issue #1) to see this working
+            if let textBlob = issue["textObjects"] as? [[String: String]] {
+                for textDict in textBlob {
+                    if textDict["type"] == "issue_solicit_text",
+                       let solicitText = textDict["text"] {
+                        description = solicitText
+                    }
+                }
+            }
+        }
+        
+        let imagePath: [String: String]? = issue["thumbnail"] as? [String: String]
+        let imageUrl = self.imageURLFromImagePath(imagePath: imagePath, size: .large)
+
+        let issueModel: IssueModel = IssueModel(id: comicId,
+                                                name: title,
+                                                imageURLString: imageUrl,
+                                                description: description)
+        //print(issueModel.name + " | " + (issueModel.imageURLString ?? "no image"))
+        return issueModel
+    }
+    
     private func generateAuthorizationParameters() -> String {
         let timestamp = String(Int(Date().timeIntervalSince1970 * 1000))
         let hash = md5Hash(string: timestamp + privateKey + publicKey)
