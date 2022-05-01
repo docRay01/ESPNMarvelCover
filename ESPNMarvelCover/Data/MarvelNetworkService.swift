@@ -45,7 +45,19 @@ class MarvelNetworkService {
                   let issue: [String:Any] = (dataDict["results"] as? [[String: Any]])?.first else { return }
             
             let title: String? = issue["title"] as? String
-            let description: String? = issue["description"] as? String
+            var description: String? = issue["description"] as? String
+            if description?.isEmpty ?? false {
+                // look for the solicit text in the text blob and use that
+                // Test with comicId 356 (`4` Issue #1) to see this working
+                if let textBlob = issue["textObjects"] as? [[String: String]] {
+                    for textDict in textBlob {
+                        if textDict["type"] == "issue_solicit_text",
+                           let solicitText = textDict["text"] {
+                            description = solicitText
+                        }
+                    }
+                }
+            }
             
             let imagePath: [String: String]? = issue["thumbnail"] as? [String: String]
             let imageUrl = self.imageURLFromImagePath(imagePath: imagePath, size: .large)
