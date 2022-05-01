@@ -29,7 +29,8 @@ struct ESPNMarvelHomeView: View {
                 }
                 .buttonStyle(.automatic)
                 
-                NavigationLink(destination: Text("NextView"), isActive: $viewModel.navigateToIssueViewFlag) {
+                NavigationLink(destination: IssueView(issue: viewModel.loadedData),
+                               isActive: $viewModel.navigateToIssueViewFlag) {
                     EmptyView()
                 }
             }

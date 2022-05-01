@@ -8,10 +8,23 @@
 import SwiftUI
 
 struct IssueView: View {
-    let issue: IssueModel
+    let issue: IssueModel?
     
     var body: some View {
-        Text("Issue display view")
+        VStack {
+            Text(issue?.name ?? "")
+            GeometryReader { metrics in
+                Image(uiImage: UIImage())
+                    .resizable()
+                    .frame(width: metrics.size.width * 0.75, height: metrics.size.width * 0.75 * 1024 / 633, alignment: .center)
+                    .aspectRatio(CGSize(width: 633, height: 1024), contentMode: .fit)
+                    .background(Color.gray)
+                    .position(x: metrics.size.width/2, y: metrics.size.height/2)
+                    
+            }
+                Text(issue?.description ?? "")
+                Text("Issue display view")
+        }.background(Color.red)
     }
     
 }
