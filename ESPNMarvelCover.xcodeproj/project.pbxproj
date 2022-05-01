@@ -19,6 +19,7 @@
 		54D119B6281E378C00A7528F /* ESPNMarvelHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D119B3281E378B00A7528F /* ESPNMarvelHomeView.swift */; };
 		54D119B7281E378C00A7528F /* ESPNMarvelHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D119B4281E378C00A7528F /* ESPNMarvelHomeViewModel.swift */; };
 		54D119B8281E378C00A7528F /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D119B5281E378C00A7528F /* IssueView.swift */; };
+		54D119BB281F0C4500A7528F /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D119BA281F0C4500A7528F /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		54D119B3281E378B00A7528F /* ESPNMarvelHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESPNMarvelHomeView.swift; sourceTree = "<group>"; };
 		54D119B4281E378C00A7528F /* ESPNMarvelHomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESPNMarvelHomeViewModel.swift; sourceTree = "<group>"; };
 		54D119B5281E378C00A7528F /* IssueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
+		54D119BA281F0C4500A7528F /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		54D119BC281F12CC00A7528F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 		54D11974281B474F00A7528F /* ESPNMarvelCover */ = {
 			isa = PBXGroup;
 			children = (
+				54D119BC281F12CC00A7528F /* Info.plist */,
 				54D1199F281B6EFC00A7528F /* Assets */,
 				54D119A2281B744D00A7528F /* Data */,
 				54D119AC281C6E1E00A7528F /* Views */,
@@ -178,6 +182,7 @@
 		54D119B9281F0C1300A7528F /* UIElements */ = {
 			isa = PBXGroup;
 			children = (
+				54D119BA281F0C4500A7528F /* ImageLoader.swift */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54D119BB281F0C4500A7528F /* ImageLoader.swift in Sources */,
 				54D119AA281B744D00A7528F /* IssueModel.swift in Sources */,
 				54D119B7281E378C00A7528F /* ESPNMarvelHomeViewModel.swift in Sources */,
 				54D119B6281E378C00A7528F /* ESPNMarvelHomeView.swift in Sources */,
@@ -482,6 +488,7 @@
 				DEVELOPMENT_TEAM = F55DMXW6P2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ESPNMarvelCover/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -512,6 +519,7 @@
 				DEVELOPMENT_TEAM = F55DMXW6P2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ESPNMarvelCover/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

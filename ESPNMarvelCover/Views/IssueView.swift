@@ -9,11 +9,12 @@ import SwiftUI
 
 struct IssueView: View {
     let issue: IssueModel?
+    @StateObject var imageLoader = ImageLoader()
     
     var body: some View {
         VStack {
             Text(issue?.name ?? "")
-                Image(uiImage: UIImage())
+            Image(uiImage: imageLoader.image(urlString: issue?.imageURLString ?? ""))
                     .resizable()
                     .aspectRatio(CGSize(width: 633, height: 1024), contentMode: .fit)
                     .background(Color.gray)
