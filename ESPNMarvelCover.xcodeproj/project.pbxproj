@@ -107,8 +107,8 @@
 				54D1199F281B6EFC00A7528F /* Assets */,
 				54D119A2281B744D00A7528F /* Data */,
 				54D119AC281C6E1E00A7528F /* Views */,
+				54D119B9281F0C1300A7528F /* UIElements */,
 				54D11975281B474F00A7528F /* ESPNMarvelCoverApp.swift */,
-				54D11979281B475300A7528F /* Assets.xcassets */,
 				54D1197B281B475300A7528F /* Preview Content */,
 			);
 			path = ESPNMarvelCover;
@@ -142,6 +142,7 @@
 		54D1199F281B6EFC00A7528F /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				54D11979281B475300A7528F /* Assets.xcassets */,
 				54D119A0281B6EFC00A7528F /* AppSecret.json */,
 			);
 			path = Assets;
@@ -172,6 +173,13 @@
 				54D119B5281E378C00A7528F /* IssueView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		54D119B9281F0C1300A7528F /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIElements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
