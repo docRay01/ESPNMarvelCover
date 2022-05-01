@@ -16,8 +16,9 @@
 		54D119A1281B6EFC00A7528F /* AppSecret.json in Resources */ = {isa = PBXBuildFile; fileRef = 54D119A0281B6EFC00A7528F /* AppSecret.json */; };
 		54D119AA281B744D00A7528F /* IssueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D119A6281B744D00A7528F /* IssueModel.swift */; };
 		54D119AB281B744D00A7528F /* MarvelNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D119A7281B744D00A7528F /* MarvelNetworkService.swift */; };
-		54D119AE281C73B200A7528F /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D119AD281C73B200A7528F /* IssueView.swift */; };
-		54D119B0281C73D500A7528F /* ESPNMarvelHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D119AF281C73D500A7528F /* ESPNMarvelHomeView.swift */; };
+		54D119B6281E378C00A7528F /* ESPNMarvelHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D119B3281E378B00A7528F /* ESPNMarvelHomeView.swift */; };
+		54D119B7281E378C00A7528F /* ESPNMarvelHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D119B4281E378C00A7528F /* ESPNMarvelHomeViewModel.swift */; };
+		54D119B8281E378C00A7528F /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D119B5281E378C00A7528F /* IssueView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +51,9 @@
 		54D119A0281B6EFC00A7528F /* AppSecret.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AppSecret.json; sourceTree = "<group>"; };
 		54D119A6281B744D00A7528F /* IssueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueModel.swift; sourceTree = "<group>"; };
 		54D119A7281B744D00A7528F /* MarvelNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelNetworkService.swift; sourceTree = "<group>"; };
-		54D119AD281C73B200A7528F /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IssueView.swift; path = ../../../IssueView.swift; sourceTree = "<group>"; };
-		54D119AF281C73D500A7528F /* ESPNMarvelHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ESPNMarvelHomeView.swift; path = ../../../ESPNMarvelHomeView.swift; sourceTree = "<group>"; };
+		54D119B3281E378B00A7528F /* ESPNMarvelHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESPNMarvelHomeView.swift; sourceTree = "<group>"; };
+		54D119B4281E378C00A7528F /* ESPNMarvelHomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESPNMarvelHomeViewModel.swift; sourceTree = "<group>"; };
+		54D119B5281E378C00A7528F /* IssueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,8 +167,9 @@
 		54D119AC281C6E1E00A7528F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				54D119AD281C73B200A7528F /* IssueView.swift */,
-				54D119AF281C73D500A7528F /* ESPNMarvelHomeView.swift */,
+				54D119B3281E378B00A7528F /* ESPNMarvelHomeView.swift */,
+				54D119B4281E378C00A7528F /* ESPNMarvelHomeViewModel.swift */,
+				54D119B5281E378C00A7528F /* IssueView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -303,9 +306,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				54D119AA281B744D00A7528F /* IssueModel.swift in Sources */,
-				54D119B0281C73D500A7528F /* ESPNMarvelHomeView.swift in Sources */,
-				54D119AE281C73B200A7528F /* IssueView.swift in Sources */,
+				54D119B7281E378C00A7528F /* ESPNMarvelHomeViewModel.swift in Sources */,
+				54D119B6281E378C00A7528F /* ESPNMarvelHomeView.swift in Sources */,
 				54D11976281B474F00A7528F /* ESPNMarvelCoverApp.swift in Sources */,
+				54D119B8281E378C00A7528F /* IssueView.swift in Sources */,
 				54D119AB281B744D00A7528F /* MarvelNetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
