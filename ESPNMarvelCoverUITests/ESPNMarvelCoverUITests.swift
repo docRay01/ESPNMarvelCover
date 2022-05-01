@@ -18,17 +18,24 @@ class ESPNMarvelCoverUITests: XCTestCase {
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
+    func testLoadIssue() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
+        //app.launchArguments = ["-ui-testing", "YES"]
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let submitButton = app.buttons["submit button"]
+        XCTAssert(submitButton.exists)
+        
+        let textInput = app.textFields["comicId field"]
+        XCTAssert(textInput.exists)
+        
+        textInput.tap()
+        textInput.typeText("356")
+        submitButton.tap()
+        
+        // Quick and dirty test if the next view was loaded
+        XCTAssert(app.images["Cover Art Image"].waitForExistence(timeout: 2.0))
     }
 
     func testLaunchPerformance() throws {

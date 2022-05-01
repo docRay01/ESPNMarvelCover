@@ -22,12 +22,14 @@ struct ESPNMarvelHomeView: View {
                                         leading: 35,
                                         bottom: 10,
                                         trailing: 35))
+                    .accessibilityIdentifier("comicId field")
                 Button {
                     viewModel.loadIssue(comicId: issueInputFieldValue)
                 } label: {
                     Text("Excelsior!")
                 }
                 .buttonStyle(.automatic)
+                .accessibilityIdentifier("submit button")
                 
                 NavigationLink(destination: IssueView(issue: viewModel.loadedData),
                                isActive: $viewModel.navigateToIssueViewFlag) {

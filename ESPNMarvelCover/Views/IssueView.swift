@@ -19,6 +19,7 @@ struct IssueView: View {
                     .aspectRatio(CGSize(width: 633, height: 1024), contentMode: .fit)
                     .background(Color.gray)
                     .layoutPriority(1)
+                    .accessibilityIdentifier("Cover Art Image")
             .padding(EdgeInsets(top: 10,
                                  leading: 80,
                                  bottom: 10,
