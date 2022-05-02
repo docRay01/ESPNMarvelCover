@@ -10,6 +10,12 @@ import CommonCrypto
 import CryptoKit
 
 class MarvelNetworkService {
+    enum IssueResponse {
+        case success(issue: IssueModel)
+        case failure
+        case error(error: Error)
+    }
+    
     private let privateKey: String
     private let publicKey: String
     private let baseMarvelURL = "https://gateway.marvel.com/v1/public"
@@ -31,19 +37,26 @@ class MarvelNetworkService {
         self.publicKey = publicKey
     }
     
-    func requestIssue(comicId: String, completionHandler: @escaping(IssueModel) -> Void) {
+    func requestIssue(comicId: String, completionHandler: @escaping(IssueResponse) -> Void) {
         let authParams = generateAuthorizationParameters()
         
         guard let url = URL(string: baseMarvelURL + "/comics/" + comicId + "?" + authParams) else {
+            completionHandler(.failure)
             return
         }
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let issueModel = self.parseIssue(comicId: comicId, data: data) else {
+            if let error = error {
+                completionHandler(.error(error: error))
                 return
             }
             
-            completionHandler(issueModel)
+            guard let issueModel = self.parseIssue(comicId: comicId, data: data) else {
+                completionHandler(.failure)
+                return
+            }
+            
+            completionHandler(.success(issue: issueModel))
         }
 
         task.resume()

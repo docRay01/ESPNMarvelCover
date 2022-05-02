@@ -35,11 +35,23 @@ class ESPNMarvelHomeViewModel: ObservableObject {
     func loadIssue(comicId: String) {
         let networkService = MarvelNetworkService()
         state = .loading
-        networkService.requestIssue(comicId: comicId) { issueModel in
-            
-            DispatchQueue.main.async {
-                self.loadedData = issueModel
-                self.state = .openingLink
+        networkService.requestIssue(comicId: comicId) { issueResponse in
+            switch issueResponse {
+            case .success(let issue):
+                DispatchQueue.main.async {
+                    self.loadedData = issue
+                    self.state = .openingLink
+                }
+            case .failure:
+                DispatchQueue.main.async {
+                    self.loadedData = nil
+                    self.state = .idle
+                }
+            case .error(_):
+                DispatchQueue.main.async {
+                    self.loadedData = nil
+                    self.state = .idle
+                }
             }
         }
     }
