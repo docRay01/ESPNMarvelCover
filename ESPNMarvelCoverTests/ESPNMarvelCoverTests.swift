@@ -71,9 +71,8 @@ class ESPNMarvelCoverTests: XCTestCase {
         let inputString = "Hello World"
         // Taken as the result from https://www.md5hashgenerator.com/
         let expectedResult = "b10a8db164e0754105b7a99be72e3fe5"
-        let service = MarvelNetworkService()
         
-        let actualResult = service.md5Hash(string: inputString)
+        let actualResult = Insecure.MD5.stringHash(string: inputString)
         XCTAssertEqual(expectedResult, actualResult)
     }
 

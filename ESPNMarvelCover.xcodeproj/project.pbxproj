@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		543BA3C32820243B00503E6F /* MD5+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543BA3C22820243B00503E6F /* MD5+Strings.swift */; };
 		54D11976281B474F00A7528F /* ESPNMarvelCoverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D11975281B474F00A7528F /* ESPNMarvelCoverApp.swift */; };
 		54D1197A281B475300A7528F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54D11979281B475300A7528F /* Assets.xcassets */; };
 		54D1197D281B475300A7528F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54D1197C281B475300A7528F /* Preview Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		543BA3C22820243B00503E6F /* MD5+Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MD5+Strings.swift"; sourceTree = "<group>"; };
 		54D11972281B474F00A7528F /* ESPNMarvelCover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ESPNMarvelCover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D11975281B474F00A7528F /* ESPNMarvelCoverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESPNMarvelCoverApp.swift; sourceTree = "<group>"; };
 		54D11979281B475300A7528F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				54D119A4281B744D00A7528F /* Models */,
 				54D119A7281B744D00A7528F /* MarvelNetworkService.swift */,
+				543BA3C22820243B00503E6F /* MD5+Strings.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				54D11976281B474F00A7528F /* ESPNMarvelCoverApp.swift in Sources */,
 				54D119B8281E378C00A7528F /* IssueView.swift in Sources */,
 				54D119AB281B744D00A7528F /* MarvelNetworkService.swift in Sources */,
+				543BA3C32820243B00503E6F /* MD5+Strings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

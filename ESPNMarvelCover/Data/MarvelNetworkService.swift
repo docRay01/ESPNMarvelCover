@@ -96,14 +96,9 @@ class MarvelNetworkService {
     
     private func generateAuthorizationParameters() -> String {
         let timestamp = String(Int(Date().timeIntervalSince1970 * 1000))
-        let hash = md5Hash(string: timestamp + privateKey + publicKey)
+        let hash = Insecure.MD5.stringHash(string: timestamp + privateKey + publicKey)
         
         return "apikey=" + publicKey + "&hash=" + hash + "&ts=" + timestamp
-    }
-    
-    func md5Hash(string: String) -> String {
-        let hashDigest = Insecure.MD5.hash(data: string.data(using: .utf8)!)
-        return hashDigest.map({String(format: "%02hhx", $0)}).joined()
     }
     
     private enum imageSize: String {
