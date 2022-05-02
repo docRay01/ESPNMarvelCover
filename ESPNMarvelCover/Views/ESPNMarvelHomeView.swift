@@ -35,7 +35,20 @@ struct ESPNMarvelHomeView: View {
                                isActive: $viewModel.navigateToIssueViewFlag) {
                     EmptyView()
                 }
-            }
+            }.overlay(
+                VStack {
+                    Text("Loading...")
+                        .font(.title)
+                }.frame(width: 700,
+                        height: 150,
+                        alignment: .center)
+                    .background(Color.init(.sRGBLinear,
+                                           red: 0.7,
+                                           green: 0.7,
+                                           blue: 0.7,
+                                           opacity: 0.6))
+                    .opacity(viewModel.state == .loading ? 1 : 0)
+            )
         }
     }
 }
